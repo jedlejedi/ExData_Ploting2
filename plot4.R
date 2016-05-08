@@ -16,9 +16,7 @@ NEI <- subset(NEI, SCC %in% coalCombustionSource)
 pm25 <- tapply(NEI$Emissions, NEI$year, sum)
 
 # Plot the chart
-opt <- options(scipen = 10)
-
-plot(names(pm25), pm25, xlab = "Year", ylab = "PM2.5 (tons)", main = "PM2.5 emission from coal combustion sources in the US")
+plot(names(pm25), pm25, xlab = "Year", ylab = "PM2.5 (tons)", main = "PM2.5 Emissions from Coal Combustion Sources in the US")
 lines(names(pm25), pm25)
 
 # Generate png file

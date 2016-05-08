@@ -18,11 +18,9 @@ pm25Baltimore <- tapply(baltimore$Emissions, baltimore$year, sum)
 pm25La <- tapply(la$Emissions, la$year, sum)
 
 # Plot the chart
-opt <- options(scipen = 10)
-
 rng <- range(c(pm25La,pm25Baltimore))
 
-plot(names(pm25La), pm25La, xlab = "Year", ylab = "PM2.5 (tons)", ylim = rng, main = "PM2.5 emission from vehicle sources\n in Baltimore City and Los Angeles", col = "red")
+plot(names(pm25La), pm25La, xlab = "Year", ylab = "PM2.5 (tons)", ylim = rng, main = "PM2.5 Emissions from Vehicle Sources\n in Baltimore City and Los Angeles", col = "red")
 lines(names(pm25La), pm25La, col = "red")
 points(names(pm25Baltimore), pm25Baltimore, col = "blue")
 lines(names(pm25Baltimore), pm25Baltimore, col = "blue")
